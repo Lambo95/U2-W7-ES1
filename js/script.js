@@ -15,12 +15,6 @@ class utente {
   }
 }
 
-for (let utente of utenti) {
-  let utentiList = document.getElementById("display");
-  let utenteDiv = utente.createUtenteDiv();
-  utentiList.appendChild(utenteDiv);
-}
-
 function createUtente() {
   utenti.push(
     new utente(
@@ -30,4 +24,9 @@ function createUtente() {
       document.getElementById("password").value
     )
   );
+  for (let utente of utenti) {
+    let utentiList = document.getElementById("display");
+    let utenteDiv = utente.createUtenteDiv();
+    utentiList.appendChild(utenteDiv);
+  }
 }
